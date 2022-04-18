@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<center>
+<div class="container mt-5">
+ <img src="{% static 'img/Flixer1.png' %}" width="300" height="120" class="mb-4">
+ {% comment %} <h3>Login</h3> {% endcomment %}
+ <form class="mx-auto" method="POST">
+  {% if message %} 
+   <div class="alert alert-info">{{message}}</div>
+  {% endif %}
+
+  {% csrf_token %}
+  {{form.as_p}}
+  <div class="col-md-6">
+  <button type="submit" class="btn btn-outline-primary mt-4">Login</button>
+  </div> 
+ </form>
+  <div class="dropdown-divider"></div>
+   <a class="dropdown-item" href="{% url 'register_attempt' %}">New around here? Sign up</a>
+  </div>
+ </div>
+</div>
+</center>
+
+{% endblock content %}

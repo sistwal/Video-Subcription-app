@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if message %}
+<div class="alert alert-info">{{ message }}</div>
+{% endif %}
+<div class="video" align="center" >
+{% for v in videos %}
+<video width="1000" height="600" controls style="top:50px;">
+<source src="{{v.video.url}}" type="video/mp4">
+</video>
+{% endfor %}
+</div>
+{% endblock content %}

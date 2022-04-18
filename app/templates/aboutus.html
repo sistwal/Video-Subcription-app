@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/about.css' %}">
+<div class="containera">
+ <h1 class="a1">About US!</h1>
+</div>
+
+<h2 align="center">Welcome To Flixer</h2>
+<h2 align="center">Flixer is a Professional Streaming Platform. Here we will provide you only interesting content, which you will like very much.</h2>
+
+<div>
+<a class="btna" href="{% url 'contact' %}">Visit us</a>
+</div>
+{% endblock content %}

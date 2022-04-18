@@ -1,0 +1,36 @@
+.avatar {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+.bg-dark{
+  background-color:#343a40;
+}
+.btn-dark{
+  color:#fff;
+  background-color:#343a40;
+  border-color:#343a40;
+}
+.btn-dark:hover{
+  color:#fff;
+  background-color:#23272b;
+  border-color:#1d2124;
+}
+.btn-dark.focus,
+.btn-dark:focus{
+  color:#fff;
+  background-color:#23272b;
+  border-color:#1d2124;
+  box-shadow:0 0 0 .2rem rgba(82,88,93,.5);
+}
+.bg-dark{
+  background-color:#343a40!important;
+}
+a.bg-dark:focus,
+a.bg-dark:hover,
+button.bg-dark:focus,
+button.bg-dark:hover{
+  background-color:#1d2124!important;
+}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+<div class="container" align="center">
+<div>
+<div class="card h-100">
+	<div class="card-body">
+		<div class="account-settings">
+			<div class="user-profile">
+				<div class="user-avatar">
+					<img src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/adult-6.png">
+				</div>
+				<h2 class="user-name">{{request.user}}</h2>
+				<h5 class="user-email">{{request.user.email}}</h5>
+			</div>
+		</div>
+		<form method="post">
+{% if message %} 
+<div class="alert alert-info">{{ message }}</div>
+{% endif %}
+{% csrf_token %}
+<div class="mb-2">
+<label for="email">Email address</label>
+<input type="email" id="email" Name="email"  placeholder="Enter your New Email" required>
+</div>
+
+<button class="btn btn-primary" type="submit" href="{% url 'edit' %}">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock content %}

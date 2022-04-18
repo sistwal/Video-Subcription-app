@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/detail.css' %}">
+<div class="container" align="center">
+<div>
+<div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 mt-5">
+<div class="card h-100">
+	<div class="card-body">
+		<div class="account-settings">
+			<div class="user-profile">
+				<div class="user-avatar">
+					<img src="https://m.media-amazon.com/images/G/02/CerberusPrimeVideo-FN38FSBD/adult-2.png">
+				</div>
+				<h2 class="user-name">{{request.user}}</h2>
+				<h5 class="user-email">{{request.user.email}}</h5>
+			</div>
+			<div class="about">
+				<h5>Subscription End date :</h5>
+				<h6>{{expiry}}</h6><br>
+                <h5>Subscription Type :</h5>
+                {% if premium == 'Y' %}
+                <h6>Yearly</h6>
+                {% elif premium == 'M' %}
+                <h6>Monthly</h6>
+                {% else %}
+                <h6>You have to Buy premium!</h6>
+                {% endif %}
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+{% endblock content %}
